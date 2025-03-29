@@ -21,7 +21,7 @@ Welcome to my portfolio website! This is a showcase of my projects, experiences,
 ## ⚡ How to Run
 1. Clone the repository:
     ```bash
-    git clone https://github.com/anjansen/portfolio-website.git
+    git clone https://github.com/anjan-in/portfolio-website.git
     ```
 2. Navigate to the project folder:
     ```bash
