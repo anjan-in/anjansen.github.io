@@ -1,393 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anjan Sen - Portfolio</title>
-    <link rel="icon" href="./favicon/favicon-32x32.png" type="image/x-icon" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/header.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
+<html>
+<title>Portfolio Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Montserrat", sans-serif
+    }
+
+    .w3-row-padding img {
+        margin-bottom: 12px
+    }
+
+    .bgimg {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('./assets/image/20151115_161421.jpg');
+        min-height: 100%;
+        filter: grayscale(1);
+    }
+</style>
+
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">Anjan Sen</div>
-            <div class="hamburger" id="hamburger">☰</div>
-            <div class="overlay" id="overlay"></div>
-            <nav id="navbar">
-                <div class="close-icon" id="close-icon">×</div>
-                <ul>
-                    <li><a href="#home" onclick="closeMenu()">Home</a></li>
-                    <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
-                    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-                    <li>
-                        <button id="theme-toggle" class="theme-toggle btn btn-solid">
-                            <span id="theme-icon">🌙</span>
-                        </button>
-                    </li>
-                </ul>
 
-                <!-- Dark/Light Mode Toggle -->
-                <!-- <button id="theme-toggle" class="theme-toggle btn btn-solid">
-                    <span id="theme-icon">🌙</span>
-                </button> -->
-            </nav>
+    <!-- Sidebar with image -->
+    <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+        <div class="bgimg"></div>
+    </nav>
+
+    <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+    <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge"
+        style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+        <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright"
+            style="padding:0 12px;">
+            <i class="fa fa-remove"></i>
+        </a>
+        <div class="w3-bar-block w3-center">
+            <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+            <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+                onclick="closeNav()">Portfolio</a>
+            <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+                onclick="closeNav()">Contact</a>
         </div>
-    </header>
+    </nav>
 
-    <div class="container-fluid gx-0">
-        <div class="landing">
-            <div class="landing--container">
-                <div class="landing--container-left">
-                    <div class="left_section_social lcl--content">
-                        <a href="https://www.facebook.com/anjan.sen.10" target="_blank"><img src="./assets/image/facebook.svg" alt="Facebook"></a>
-                        <a href="https://www.youtube.com/@anjansen6335" target="_blank"><img src="./assets/image/youtube.svg" alt="YouTube"></a>
-                        <a href="https://github.com/anjan-in" target="_blank"><img src="./assets/image/github.svg" alt="GitHub"></a>
-                        <a href="https://www.linkedin.com/in/anjansen-tech/" target="_blank"><img src="./assets/image/linkedin.svg" alt="LinkedIn"></a>
-                    </div>
+    <!-- Page Content -->
+    <div class="w3-main w3-padding-large" style="margin-left:40%">
+
+        <!-- Menu icon to open sidebar -->
+        <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;"
+            onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+        <!-- Header -->
+        <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+            <h1 class="w3-jumbo"><b>Anjan Sen</b></h1>
+            <p>Frontend & UI/UX Developer</p>
+            <img src="./assets/image/20151115_161421.jpg" class="w3-image w3-hide-large w3-hide-small w3-round"
+                style="display:block;width:60%;margin:auto;">
+            <img src="./assets/image/20151115_161421.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round"
+                width="1000" height="1333">
+            <a href="./assets/resume/Anjan -Frontend_Developer - 2025.pdf">
+                <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+                    <i class="fa fa-download"></i> Download Resume
+                </button>
+            </a>
+        </header>
+
+        <!-- Portfolio Section -->
+        <div class="w3-padding-32 w3-content" id="portfolio">
+            <h2 class="w3-text-grey">My Portfolio</h2>
+            <hr class="w3-opacity">
+
+            <!-- Grid for photos -->
+            <div class="w3-row-padding" style="margin:0 -16px">
+                <div class="w3-half">
+                    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/sailboat.jpg" style="width:100%">
                 </div>
 
-                <img class="landing--img" src="./assets/image/anjan-sen.png" alt="Anjan Sen">
-
-                <div class="landing--container-right">
-                    <div class="lcr--content">
-                        <h6>Frontend & UI/UX Developer</h6>
-                        <h1 class="fw-bold">Anjan Sen</h1>
-                        <p>
-                            Hi, I'm Anjan Sen – a passionate Frontend & UI/UX Developer!
-                            I craft seamless user experiences and scalable design systems.
-                            I bring ideas to life with clean code and intuitive design. Let's build something amazing!
-                        </p>
-                        <div class="lcr-buttonContainer">
-                            <a href="./assets/resume/Anjan -Frontend_Developer - 2025.pdf" download="resume" target="_blank">
-                                <button class="btn btn-border ms-0">Download CV</button>
-                            </a>
-                            <a href="#contact">
-                                <button class="btn btn-solid">Contact</button>
-                            </a>
-                        </div>
-                    </div>
+                <div class="w3-half">
+                    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/chef.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/p6.jpg" style="width:100%">
                 </div>
+                <!-- End photo grid -->
             </div>
-        </div>
-
-        <div class="exp_container">
-            <div class="experience-body">
-                <div class="experience-img">
-                    <img src="./assets/image/experience-desk.svg" alt="Experience DP">
-                </div>
-                <div class="experience-description">
-                    <h2 class="fw-semibold">Experience</h2>
-                    <div class="experience-card expShades">
-                        <div class="expcard-img">
-                            <img src="./assets/image/suitcase-bag.svg" alt="">
-                        </div>
-                        <div class="experience-details">
-                            <h6>2023-2025</h6>
-                            <h4>Software Developer</h4>
-                            <h5>Cyber Waves B.V</h5>
-                        </div>
-                    </div>
-                    <div class="experience-card expShades">
-                        <div class="expcard-img">
-                            <img src="./assets/image/suitcase-bag.svg" alt="">
-                        </div>
-                        <div class="experience-details">
-                            <h6>2022-2023</h6>
-                            <h4>Web Developer</h4>
-                            <h5>Keeplee Infotech Pvt. Ltd.</h5>
-                        </div>
-                    </div>
-                    <div class="experience-card expShades">
-                        <div class="expcard-img">
-                            <img src="./assets/image/suitcase-bag.svg" alt="">
-                        </div>
-                        <div class="experience-details">
-                            <h6>2018-2019</h6>
-                            <h4>Team Lead</h4>
-                            <h5>Rudranee Infotech Pvt. Ltd.</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- End Portfolio Section -->
         </div>
 
-        <div class="projects">
-            <div class="projects--header">
-                <h2 class="fw-semibold">Projects</h2>
-            </div>
-            <div class="projects--body">
-                <div class="projects--bodyContainer">
-                    <div class="singleProject">
-                        <div class="projectContent">
-                            <h2>Task Manager App</h2>
-                            <img src="./assets/image/task-manager-app.svg" alt="">
-                            <div class="project--showcaseBtn">
-                                <a href="https://github.com/anjan-in/task-manager-app" target="_blank" class="jss88">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M5.46484 3.92349C4.79896 3.5739 4 4.05683 4 4.80888V19.1911C4 19.9432 4.79896 20.4261 5.46483 20.0765L19.1622 12.8854C19.8758 12.5108 19.8758 11.4892 19.1622 11.1146L5.46484 3.92349ZM2 4.80888C2 2.55271 4.3969 1.10395 6.39451 2.15269L20.0919 9.34382C22.2326 10.4677 22.2325 13.5324 20.0919 14.6562L6.3945 21.8473C4.39689 22.8961 2 21.4473 2 19.1911V4.80888Z" fill="#FFFFFF"></path> </g></svg>
-                                </a>
-                                <a href="https://github.com/anjan-in/task-manager-app" target="_blank" class="jss88">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 8L3 11.6923L7 16M17 8L21 11.6923L17 16M14 4L10 20" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                                </a>
-                            </div>
-                        </div>
-                        <p class="project--desc">
-                            A user-friendly task management application for efficiently creating, editing, and tracking tasks. Developed with the MERN stack and a responsive Bootstrap UI.
-                        </p>
-                        <div class="project--lang">
-                            <span>MERN Stack</span>
-                            <span>HTML & CSS</span>
-                            <span>Material UI</span>
-                        </div>
-                    </div>
-                    <div class="singleProject">
-                        <div class="projectContent">
-                            <h2>E-Commerce Platform</h2>
-                            <img src="./assets/image/ecommerce-platform.svg" alt="">
-                            <div class="project--showcaseBtn">
-                                <a href="https://github.com/anjan-in/e-commerce-platform" target="_blank" class="jss88">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M5.46484 3.92349C4.79896 3.5739 4 4.05683 4 4.80888V19.1911C4 19.9432 4.79896 20.4261 5.46483 20.0765L19.1622 12.8854C19.8758 12.5108 19.8758 11.4892 19.1622 11.1146L5.46484 3.92349ZM2 4.80888C2 2.55271 4.3969 1.10395 6.39451 2.15269L20.0919 9.34382C22.2326 10.4677 22.2325 13.5324 20.0919 14.6562L6.3945 21.8473C4.39689 22.8961 2 21.4473 2 19.1911V4.80888Z" fill="#FFFFFF"></path> </g></svg>
-                                </a>
-                                <a href="https://github.com/anjan-in/e-commerce-platform" target="_blank" class="jss88">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 8L3 11.6923L7 16M17 8L21 11.6923L17 16M14 4L10 20" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                                </a>
-                            </div>
-                        </div>
-                        <p class="project--desc">
-                            E-Commerce Platform – Scalable Shopping Experience.
-                        </p>
-                        <div class="project--lang">
-                            <span>Angular</span>
-                            <span>TypeScript</span>
-                        </div>
-                    </div>
-                    <div class="singleProject">
-                        <div class="projectContent">
-                            <h2>Weather App</h2>
-                            <img src="./assets/image/weather-app.svg" alt="">
-                            <div class="project--showcaseBtn">
-                                <a href="https://github.com/anjan-in/weather-app" target="_blank" class="jss88">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M5.46484 3.92349C4.79896 3.5739 4 4.05683 4 4.80888V19.1911C4 19.9432 4.79896 20.4261 5.46483 20.0765L19.1622 12.8854C19.8758 12.5108 19.8758 11.4892 19.1622 11.1146L5.46484 3.92349ZM2 4.80888C2 2.55271 4.3969 1.10395 6.39451 2.15269L20.0919 9.34382C22.2326 10.4677 22.2325 13.5324 20.0919 14.6562L6.3945 21.8473C4.39689 22.8961 2 21.4473 2 19.1911V4.80888Z" fill="#FFFFFF"></path> </g></svg>
-                                </a>
-                                <a href="https://github.com/anjan-in/weather-app" target="_blank" class="jss88">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 8L3 11.6923L7 16M17 8L21 11.6923L17 16M14 4L10 20" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                                </a>
-                            </div>
-                        </div>
-                        <p class="project--desc">
-                            This project aims to build a real-time weather application using OpenWeatherMap API. Displays temperature, humidity, wind speed, and a 5-day forecast.
-                        </p>
-                        <div class="project--lang">
-                            <span>API Integration</span>
-                            <span>JavaScript</span>
-                            <span>HTML & CSS</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="projects--viewAll">
-                    <a href="#">
-                        <button class="btn jss86 fw-semibold">
-                            View All
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" class="jss87" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="edu_container">
-            <div class="education-body">
-                <div class="education-description">
-                    <h2 class="fw-semibold">Education</h2>
-                    <div class="education-card expShades">
-                        <div class="expcard-img">
-                            <img src="./assets/image/graduation-hat.svg" alt="">
-                        </div>
-                        <div class="education-details">
-                            <h6>2019-2021</h6>
-                            <h4>Master of Computer Application</h4>
-                            <h5>Kalinga University</h5>
-                        </div>
-                    </div>
-                    <div class="education-card expShades">
-                        <div class="expcard-img">
-                            <img src="./assets/image/graduation-hat.svg" alt="">
-                        </div>
-                        <div class="education-details">
-                            <h6>2015-2018</h6>
-                            <h4>Bachelor of Computer Application</h4>
-                            <h5>Singhania University</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="education-img">
-                    <img src="./assets/image/education-dp.svg" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="achievement_container">
-            <div class="achievement-body">
-                <h2 class="fw-semibold">Achievements</h2>
-                <h4>
-                    My achievements are reflected in the seamless digital experiences I’ve crafted. From transforming concepts into intuitive designs and developing responsive interfaces to enhancing user satisfaction and optimizing performance, each project highlights my dedication to innovation, problem-solving, and delivering impactful results.
-                </h4>
-            </div>
-            <div class="achievement-cards">
-                <div class="achievement-card expShades">
-                    <div class="achievecard-content">
-                        <div class="achievecard-details1">
-                            <h2 class="fw-semibold">UX, UI and Design Thinking Certification</h2>
-                            <p>
-                                Gained insights into user-centered design, prototyping, and problem-solving for creating intuitive digital experiences.
-                            </p>
-                        </div>
-                        <div class="achievecard-details2">
-                            <h5>Apr 2024</h5>
-                            <div class="achievecard-field">
-                                <img src="./assets/image/folder.svg" alt="svg">
-                                <h5>UI/UX</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="achievecard-imgcontainer">
-                        <img src="./assets/image/udemy.jpg" alt="UI/UX Design">
-                    </div>
-                </div>
-                <div class="achievement-card expShades">
-                    <div class="achievecard-content">
-                        <div class="achievecard-details1">
-                            <h2 class="fw-semibold">Introduction to JavaScript</h2>
-                            <p>
-                                Gained foundational knowledge of JavaScript, including variables, functions, loops, and event handling for building interactive web applications.
-                            </p>
-                        </div>
-                        <div class="achievecard-details2">
-                            <h5>Jul 2023</h5>
-                            <div class="achievecard-field">
-                                <img src="./assets/image/file.svg" alt="svg">
-                                <h5>Programming</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="achievecard-imgcontainer">
-                        <img src="./assets/image/great-learning.jpg" alt="Programming">
-                    </div>
-                </div>
-                <div class="achievement-card expShades">
-                    <div class="achievecard-content">
-                        <div class="achievecard-details1">
-                            <h2 class="fw-semibold">Introduction to SQL</h2>
-                            <p>
-                                Acquired foundational knowledge of SQL, including querying databases, managing data, and performing data manipulation and analysis.
-                            </p>
-                        </div>
-                        <div class="achievecard-details2">
-                            <h5>Jan 2023</h5>
-                            <div class="achievecard-field">
-                                <img src="./assets/image/folder.svg" alt="svg">
-                                <h5>Database</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="achievecard-imgcontainer">
-                        <img src="./assets/image/Simplilearn.jpg" alt="SQL">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="contacts_container">
-            <div class="contacts_wrapper">
-                <h2 class="fw-semibold">Contacts</h2>
-                <div class="contacts-body" id="contact">
-                    <div class="contacts-form">
-                        <form action="/">
-                            <div class="input-container">
-                                <label for="Name" class="form-label">Name</label>
-                                <input type="text" name="Name" class="form-input" placeholder="Anjan Sen">
-                            </div>
-                            <div class="input-container">
-                                <label for="Email" class="form-label">Email</label>
-                                <input type="email" name="Email" class="form-input" placeholder="anjan@sen.com">
-                            </div>
-                            <div class="input-container">
-                                <label for="Message" class="form-label">Message</label>
-                                <textarea name="Message" id="Message" type="text" class="form-message" placeholder="Type your message..."></textarea>
-                            </div>
-                            <div class="submit-btn">
-                                <button class="jss104" type="submit">
-                                    <span>Send</span>
-                                    <div class="submit-icon">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" t="1569683742680" viewBox="0 0 1024 1024" version="1.1" class="send-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="animation: initial; position: initial;"><defs></defs><path d="M931.4 498.9L94.9 79.5c-3.4-1.7-7.3-2.1-11-1.2-8.5 2.1-13.8 10.7-11.7 19.3l86.2 352.2c1.3 5.3 5.2 9.6 10.4 11.3l147.7 50.7-147.6 50.7c-5.2 1.8-9.1 6-10.3 11.3L72.2 926.5c-0.9 3.7-0.5 7.6 1.2 10.9 3.9 7.9 13.5 11.1 21.5 7.2l836.5-417c3.1-1.5 5.6-4.1 7.2-7.1 3.9-8 0.7-17.6-7.2-21.6zM170.8 826.3l50.3-205.6 295.2-101.3c2.3-0.8 4.2-2.6 5-5 1.4-4.2-0.8-8.7-5-10.2L221.1 403 171 198.2l628 314.9-628.2 313.2z"></path></svg>
-                                    </div>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="contacts-details">
-                        <a href="mailto:anjansen30@gmail.com" class="personal-details">
-                            <div class="jss103">
-                                <img src="./assets/image/email-outline.svg" alt="">
-                            </div>
-                            <p class="fw-semibold">anjansen30@gmail.com</p>
-                        </a>
-                        <a href="tel:+916202151927" class="personal-details">
-                            <div class="jss103">
-                                <img src="./assets/image/phone-outline.svg" alt="">
-                            </div>
-                            <p class="fw-semibold">+91 6202151927</p>
-                        </a>
-                        <div class="personal-details">
-                            <div class="jss103">
-                                <img src="./assets/image/location-outline.svg" alt="">
-                            </div>
-                            <p class="fw-semibold">386, Chas, Bokaro, Jharkhand, India - 827013</p>
-                        </div>
-                        <div class="socialmedia-icons">
-                            <a href="https://www.facebook.com/anjan.sen.10" target="_blank" class="jss102">
-                                <img src="./assets/image/facebook-outline.svg" alt="">
-                            </a>
-                            <a href="https://www.youtube.com/@anjansen6335" target="_blank" class="jss102">
-                                <img src="./assets/image/youtube-outline.svg" alt="">
-                            </a>
-                            <a href="https://github.com/anjan-in" target="_blank" class="jss102">
-                                <img src="./assets/image/github-outline.svg" alt="">
-                            </a>
-                            <a href="https://www.linkedin.com/in/anjansen-tech/" target="_blank" class="jss102">
-                                <img src="./assets/image/linkedin-outline.svg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <img src="./assets/image/contacts-image.svg" alt="Contact DP" class="contacts--img">
-        </div>
-
-        <div class="footer">
+        <!-- About Section -->
+        <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+            <h2>About</h2>
+            <hr class="w3-opacity">
             <p>
-                Made with
-                <span>❤️</span>
-                by Anjan Sen
+                Hi, I'm Anjan Sen – a passionate Frontend & UI/UX Developer with 3+ Years of experience
+                building scalable, high-performance SaaS platforms and dashboards with a strong focus on compliance systems
+                user-centric designs. Passionate about problem-solving and creating visually compelling experiences.
+                in Angular, TypeScript, and UI Design. Adept at 
+                performance SaaS platforms and dashboards with a strong focus on compliance systems and 
+                solving and creating visually compelling experiences. 
             </p>
+            <h3 class="w3-padding-16">My Skills</h3>
+            <p class="w3-wide">Web Design</p>
+            <div class="w3-light-grey">
+                <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:95%">95%</div>
+            </div>
+            <p class="w3-wide">Frontend Framework</p>
+            <div class="w3-light-grey">
+                <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">85%</div>
+            </div>
+            <p class="w3-wide">UI/UX</p>
+            <div class="w3-light-grey">
+                <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
+            </div><br>
+
+            <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-section">
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">14+</span><br>
+                    Partners
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">55+</span><br>
+                    Projects Done
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">89+</span><br>
+                    Happy Clients
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">150+</span><br>
+                    Meetings
+                </div>
+            </div>
+
+            <a href="./assets/resume/Anjan -Frontend_Developer - 2025.pdf">
+                <button class="w3-button w3-light-grey w3-padding-large w3-section">
+                    <i class="fa fa-download"></i> Download Resume
+                </button>
+            </a>
+
+            <!-- Testimonials -->
+            <h3 class="w3-padding-24">My Reputation</h3>
+            <img src="https://www.w3schools.com/w3images/avatar_smoke.jpg" alt="Avatar"
+                class="w3-left w3-circle w3-margin-right" style="width:80px">
+            <p><span class="w3-large w3-text-black w3-margin-right">Chandler Bing.</span> Web Designer.</p>
+            <p>Jane Doe is just awesome. I am so happy to have met her!</p><br>
+
+            <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Avatar"
+                class="w3-left w3-circle w3-margin-right" style="width:80px">
+            <p><span class="w3-large w3-text-black w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
+            <p>Jane Doe saved us from a web disaster.</p><br>
+
+            <img src="https://www.w3schools.com/w3images/avatar_g2.jpg" alt="Avatar"
+                class="w3-left w3-circle w3-margin-right" style="width:80px">
+            <p><span class="w3-large w3-text-black w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
+            <p>No one is better than Jane Doe.</p><br>
+
+            <!-- Grid for pricing tables -->
+            <h3 class="w3-padding-16">My Price</h3>
+            <div class="w3-row-padding" style="margin:0 -16px">
+                <div class="w3-half w3-margin-bottom">
+                    <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+                        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+                        <li class="w3-padding-16">Web Design</li>
+                        <li class="w3-padding-16">Photography</li>
+                        <li class="w3-padding-16">5GB Storage</li>
+                        <li class="w3-padding-16">Mail Support</li>
+                        <li class="w3-padding-16">
+                            <h2>$ 10</h2>
+                            <span class="w3-opacity">per month</span>
+                        </li>
+                        <li class="w3-light-grey w3-padding-24">
+                            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w3-half">
+                    <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+                        <li class="w3-black w3-xlarge w3-padding-32">Pro</li>
+                        <li class="w3-padding-16">Web Design</li>
+                        <li class="w3-padding-16">Photography</li>
+                        <li class="w3-padding-16">50GB Storage</li>
+                        <li class="w3-padding-16">Endless Support</li>
+                        <li class="w3-padding-16">
+                            <h2>$ 25</h2>
+                            <span class="w3-opacity">per month</span>
+                        </li>
+                        <li class="w3-light-grey w3-padding-24">
+                            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Grid/Pricing tables -->
+            </div>
+
+            <!-- End About Section -->
         </div>
 
-        <div class="backToTop">
-            <button class="btn b2top" id="backToTopBtn">
-                <img src="./assets/image/up-arrow-outline.svg" alt="Back to Top">
-            </button>
+        <!-- Contact Section -->
+        <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+            <h2>Contact Me</h2>
+            <hr class="w3-opacity">
+
+            <div class="w3-section">
+                <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Bokaro, India</p>
+                <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +91 6202151927</p>
+                <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: anjansen30@gmail.com</p>
+            </div>
+
+            <!-- Image of location/map -->
+            <img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image w3-greyscale"
+                style="width:100%;margin:32px 0">
+
+            <p>Lets get in touch. Send me a message:</p>
+            <form action="/action_page.php" target="_blank">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name">
+                </p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required
+                        name="Email"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required
+                        name="Subject"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required
+                        name="Message"></p>
+                <p>
+                    <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </p>
+            </form>
+            <!-- End Contact Section -->
         </div>
 
-        <main style="display: none;">
-            <section class="theme-controls">
-                <button id="theme-toggle" class="btn btn-small">Switch Theme</button>
-                <label for="color-picker">Pick a Theme Color:</label>
-                <input type="color" id="color-picker" />
-            </section>
-        </main>
+        <!-- Footer -->
+        <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+            <p class="w3-medium">Powered by <a href="#" target="_blank" class="w3-hover-text-green">Anjan Sen</a></p>
+            <!-- End footer -->
+        </footer>
+
+        <!-- END PAGE CONTENT -->
     </div>
 
-  <script src="./assets/js/script.js"></script>
+    <script>
+        // Open and close sidebar
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "60%";
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+    <script src="./assets/js/script.js"></script>
+
 </body>
+
 </html>
