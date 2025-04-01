@@ -16,16 +16,16 @@ Welcome to my portfolio website! This is a showcase of my projects, experiences,
 - **JavaScript** - Interactive components and functionalities.
 
 ## 📸 Preview
-![Dark Mode Preview](./assets/image/dark_theme.png)
+<!-- ![Dark Mode Preview](./assets/image/dark_theme.png) -->
 
 ## ⚡ How to Run
 1. Clone the repository:
     ```bash
-    git clone https://github.com/anjansen/portfolio-website.git
+    git clone https://github.com/anjan-in/anjansen.github.io.git
     ```
 2. Navigate to the project folder:
     ```bash
-    cd portfolio-website
+    cd anjansen.github.io
     ```
 3. Open the `index.html` file in your browser.
 
